@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "brexon";
+  src: url("./assets/brexon/Brexon-Regular.ttf");
+}
+@font-face {
+  font-family: "roman-wood";
+  src: url("./assets/roman/Roman-Wood-Type-JNL.ttf");
+}
+@font-face {
+  font-family: "rillosta";
+  src: url("./assets/rillosta/Rillosta.ttf");
+}
+*::selection {
+  color: #080206;
+  background-color: #7a9db1;
+}
