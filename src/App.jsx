@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
+import BubbleCursor from "./components/BubbleCursor";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -16,6 +17,7 @@ const App = () => {
         <Loader onFinish={() => setLoading(false)} />
       ) : (
         <div className="min-h-screen w-full  relative dark:bg-black bg-white">
+          <BubbleCursor />
           <div
             className="fixed inset-0 "
             style={{
