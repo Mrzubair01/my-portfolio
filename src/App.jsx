@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import BubbleCursor from "./components/BubbleCursor";
+import { Toaster } from "sonner";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ const App = () => {
       ) : (
         <div className="min-h-screen w-full  relative dark:bg-black bg-white">
           <BubbleCursor />
+          <Toaster richColors position="top-left" />
           <div
             className="fixed inset-0 "
             style={{
