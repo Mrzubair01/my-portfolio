@@ -47,6 +47,13 @@ const projects = [
     image: "/assets/projects/images/my-blogspace-ss.png",
     github: "https://github.com/Mrzubair01/MyBlogSpace",
     live: "https://myblogspace-544l.onrender.com"
+  }, {
+    id: 4,
+    title: "Keep Notes",
+    description: "A Modern React To-Do Web App! It’s ideal for anyone who wants a fast, elegant, no-login-required task tracker that just works — even after refreshing the browser!",
+    image: "/assets/projects/images/keep-notes-ss.png",
+    github: "https://github.com/Mrzubair01/my-portfolio",
+    live: "https://keep-notes-ucrz.onrender.com/"
   }
 ];
 
