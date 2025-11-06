@@ -27,7 +27,9 @@ const Footer = () => {
             >
               <img
                 src={social.icon}
-                alt={social.name}
+                alt={`${social.name} icon`}
+                loading="lazy"
+                decoding="async"
                 className="w-5 h-5 filter "
               />
             </motion.a>

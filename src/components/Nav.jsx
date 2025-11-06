@@ -54,7 +54,7 @@ const Nav = () => {
               <li key={item.id}>
                 <motion.a
                   href={item.path}
-                  className="transition-colors dark:hover:text-rose-800 hover:text-sky-500 cursor-pointer  text-2xl font-normal mx-2 inline-block hover:text-shadow-sky-800 hover:text-shadow-xs dark:hover:text-shadow-rose-800"
+                  className="transition-colors dark:hover:text-rose-800 hover:text-sky-500 cursor-pointer  text-2xl font-normal mx-2 inline-block hover:text-shadow-sky-800 hover:text-shadow-xs dark:hover:text-shadow-rose-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-rose-800 rounded-md"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -71,7 +71,18 @@ const Nav = () => {
           onClick={() => toggleMenu()}
           className={`${
             isOpen ? "open" : ""
-          } z-50  items-center justify-center flex lg:hidden cursor-pointer  `}
+          } z-50  items-center justify-center flex lg:hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-rose-800 rounded-md `}
+          tabIndex={0}
+          role="button"
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggleMenu();
+            }
+          }}
         >
           <span></span>
           <span></span>
@@ -87,7 +98,10 @@ const Nav = () => {
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
             >
-              <div className="flex flex-col items-end justify-center h-[80%] w-[90%] rounded-4xl p-5 border-2 dark:border-rose-800 border-sky-500 pr-10">
+              <div
+                id="mobile-menu"
+                className="flex flex-col items-end justify-center h-[80%] w-[90%] rounded-4xl p-5 border-2 dark:border-rose-800 border-sky-500 pr-10"
+              >
                 <h2 className="md:text-6xl text-4xl font-bold mb-2 font-[roman-wood] tracking-wider">
                   Menu
                 </h2>
@@ -107,7 +121,7 @@ const Nav = () => {
                     >
                       <motion.a
                         href={item.path}
-                        className="transition-colors dark:hover:text-rose-800 hover:text-sky-500 cursor-pointer md:text-5xl text-3xl font-normal inline-block hover:text-shadow-sky-800 hover:text-shadow-xs dark:hover:text-shadow-rose-800"
+                        className="transition-colors dark:hover:text-rose-800 hover:text-sky-500 cursor-pointer md:text-5xl text-3xl font-normal inline-block hover:text-shadow-sky-800 hover:text-shadow-xs dark:hover:text-shadow-rose-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-rose-800 rounded-md"
                         onClick={toggleMenu}
                         whileHover={{ scale: 1.2, x: -10 }}
                         whileTap={{ scale: 0.95 }}

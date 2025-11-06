@@ -27,7 +27,9 @@ const About = () => {
           <div className="relative bg-white dark:bg-gray-900 p-2 rounded-lg shadow-lg ">
             <img
               src={myImage}
-              alt="Mohd Zubair Alam"
+              alt="Portrait of Mohd Zubair Alam"
+              loading="lazy"
+              decoding="async"
               className="w-56 h-72 object-cover rounded-md shadow-lg "
             />
             <p className="mt-3 text-center text-sm text-gray-600 dark:text-gray-400 italic">

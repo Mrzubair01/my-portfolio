@@ -70,17 +70,17 @@ const Hero = () => {
             href="/resume/Mohd-Zubair-Alam_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            class="relative inline-block text-lg group"
+            className="relative inline-block text-lg group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-rose-800 rounded-xl"
           >
-            <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-white transition-colors duration-300 ease-out border-4 border-gray-800 rounded-xl group-hover:text-white dark:group-hover:text-gray-800">
-              <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-transparent"></span>
-              <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-rose-700 dark:bg-sky-500 group-hover:-rotate-180 ease"></span>
-              <span class="relative flex items-center gap-2">
+            <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 dark:text-white transition-colors duration-300 ease-out border-4 border-gray-800 rounded-xl group-hover:text-white dark:group-hover:text-gray-800">
+              <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-transparent"></span>
+              <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-rose-700 dark:bg-sky-500 group-hover:-rotate-180 ease"></span>
+              <span className="relative flex items-center gap-2">
                 <FaDownload /> Resume
               </span>
             </span>
             <span
-              class="absolute bottom-0 right-0 w-full  transition-all duration-200 ease-linear bg-rose-700 dark:bg-sky-500 rounded-xl group-hover:mb-0 group-hover:mr-0"
+              className="absolute bottom-0 right-0 w-full  transition-all duration-200 ease-linear bg-rose-700 dark:bg-sky-500 rounded-xl group-hover:mb-0 group-hover:mr-0"
               data-rounded="rounded-lg"
             ></span>
           </a>
@@ -89,12 +89,12 @@ const Hero = () => {
             href="https://www.linkedin.com/in/zubair-alam-/"
             target="_blank"
             rel="noopener noreferrer"
-            class="relative inline-flex items-center px-5 hover:pr-12 duration-300 ease-in-out overflow-hidden text-lg font-medium text-gray-800 hover:text-white dark:text-white border-4 border-gray-800 rounded-xl dark:hover:text-gray-800 group hover:bg-gray-50"
+            className="relative inline-flex items-center px-5 hover:pr-12 duration-300 ease-in-out overflow-hidden text-lg font-medium text-gray-800 hover:text-white dark:text-white border-4 border-gray-800 rounded-xl dark:hover:text-gray-800 group hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:focus-visible:ring-rose-800"
           >
-            <span class="absolute left-0 block w-full  transition-all bg-sky-500 dark:bg-rose-700 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-            <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+            <span className="absolute left-0 block w-full  transition-all bg-sky-500 dark:bg-rose-700 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+            <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
               <svg
-                class="w-5 h-5"
+                className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ const Hero = () => {
                 ></path>
               </svg>
             </span>
-            <span class="relative flex items-center gap-2">
+            <span className="relative flex items-center gap-2">
               <FaLinkedin /> Connect on LinkedIn
             </span>
           </a>

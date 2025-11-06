@@ -219,7 +219,13 @@ const Contact = () => {
                 whileTap={{ scale: 0.9 }}
                 className={`${social.color} w-16 h-16 flex items-center justify-center rounded-full shadow-lg hover:shadow-2xl transition`}
               >
-                <img src={social.icon} alt={social.name} className="w-8 h-8" />
+                <img
+                  src={social.icon}
+                  alt={`${social.name} icon`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-8 h-8"
+                />
               </motion.a>
             ))}
           </div>

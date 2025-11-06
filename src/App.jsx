@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import Loader from "./components/Loader";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
@@ -7,18 +7,34 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
-import BubbleCursor from "./components/BubbleCursor";
 import { Toaster } from "sonner";
+
+const BubbleCursorLazy = lazy(() => import("./components/BubbleCursor"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [showCursor, setShowCursor] = useState(false);
+
+  useEffect(() => {
+    try {
+      const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      setShowCursor(hasFinePointer && !prefersReducedMotion);
+    } catch {}
+  }, []);
   return (
     <>
       {loading ? (
         <Loader onFinish={() => setLoading(false)} />
       ) : (
         <div className="min-h-screen w-full  relative dark:bg-black bg-white">
-          <BubbleCursor />
+          {showCursor && (
+            <Suspense fallback={null}>
+              <BubbleCursorLazy />
+            </Suspense>
+          )}
           <Toaster richColors position="top-left" />
           <div
             className="fixed inset-0 "

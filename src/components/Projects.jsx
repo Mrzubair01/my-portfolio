@@ -30,8 +30,12 @@ const Projects = () => {
 
             <img
               src={project.image}
-              alt={project.title}
-              className="w-full h- object-cover"
+              alt={`${project.title} screenshot`}
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+              className="w-full aspect-video object-cover"
             />
 
             <div className="p-6">
